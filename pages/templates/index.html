@@ -1,0 +1,84 @@
+{% import "_macros.html" as macros %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Repairs in the Coast">
+    {% include "_variables.html" %}
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
+    <link rel="icon" type="image/png" href="{{ get_url(path="favicon.png") }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+    {% endblock head %}
+</head>
+
+<body>
+    {% block header %}
+
+    <header class="pos-absolute" style="background-color: transparent">
+        {{ macros::render_header() }}
+    </header>
+
+    <div class="hero">
+        {% block hero %}
+        <section class="text-center">
+            <h1 class="heading-text" style="font-size: 50px">
+                Easy and Affordable IT Repairs
+            </h1>
+            <p class="title-text">
+                I'm Zeke, your local IT repair technician in the. I do all kinds of repairs from Phones to computers. Click the button below to find out what I can do for you.
+            </p>
+            <a class="button" href="{{ get_url(path="repair") }}">Repair my device</a>
+
+        </section>
+        <img class="hero-image" style="width: 50%" alt="Penguin mascot" src="{{ get_url(path="icons/repair_penguin.svg") }}">
+
+        <div class="explore-more text">
+            <a href="#content">Explore More ⇩</a>
+        </div>
+        <style>
+            .hero section {
+                padding: 0 5rem;
+            }
+            @media screen and (max-width: 768px) {
+                .hero section {
+                    padding: 0 2rem;
+                }
+
+                .hero-image {
+                    display: none
+                }
+            }
+        </style>
+        {% endblock hero %}
+    </div>
+
+    {% endblock header %}
+
+    <main>
+        <div class="content text" id="content">
+            {% block content %}
+            <div id="features" class="heading-text">{{ section.title }}</div>
+            {{ section.content | safe }}
+            {% endblock content %}
+        </div>
+
+        {% block sidebar %}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+    <footer>
+        <small class="subtext">
+            <a>Ezekiel Smith</a> © 2022
+        </small>
+    </footer>
+    {% endblock footer %}
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+{% import "_macros.html" as macros %}
+{% extends "index.html" %}
+
+{% block title %}{{ page.title }} | {{ super() }} {% endblock title %}
+
+{% block header %}
+<header>
+    {{ macros::render_header() }}
+</header>
+{% endblock header %}
+
+{% block content %}
+<div class="heading-text">{{ page.title }}</div>
+{{ page.content | safe }}
+    <form name="{{ page.title }}" method="POST" action="/repair/success">
+        <h1>Booking Details</h1>
+        {% if page.taxonomies.repairs %}
+            {% for repair in page.taxonomies.repairs %}
+                <p><label><input type="checkbox" name="{{ repair }}" value="true" autocomplete="off"> {{ repair }}</label></p>
+            {% endfor %}
+        {% endif %}
+        <p class="hidden">
+          <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+        </p>
+        <input type="checkbox" id="toggle"> <label for="toggle">Other</label>
+        <p class="extra">
+            <label>Special Request: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <label>Your Name (required): <input class="details" type="text" name="name" required/></label>   
+        </p>
+        <p>
+          <label>Email (required): <input class="details" type="email" name="email" required/></label>
+        </p>
+        <p>
+          <label>Phone Number (optional): <input class="details" type="number" name="phone"/></label>
+        </p>
+        <input type="checkbox" id="service-toggle" autocomplete="off"> <label>Home service or pickup</label>
+        <div class="extra-service">
+            <p>
+              <label>Address <input class="details" name="address"/></label>
+            </p>
+          <p>View <a href="{{ get_url(path=" contact") }}">Contact</a> for service areas and fees</p>
+          </p>
+        </div>
+        <p></p>
+          <button type="submit">Request a booking (demo)</button>
+
+        <i>Bookings do nothing, this is a demo site</i>
+      </p>
+    </form>      
+<p><a href="{{ get_url(path="/contact") }}">Contact</a> me if you need any more infomation</p>
+{% endblock content %}

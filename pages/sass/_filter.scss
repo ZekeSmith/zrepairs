@@ -1,0 +1,33 @@
+ /* Style the search box */
+ #filter {
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+#Search:focus > h1 {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a .title-text {
+  color: var(--primary-text-color);
+}
+
+/* Style the navigation links */
+.devices a {
+  border-radius: 10px;
+  background-color: var(--highlight-color);
+  padding: 12px;
+  color: white;
+  display: block
+}
+
+.devices a:hover {
+  background-color: var(--highlight-hover);
+} 

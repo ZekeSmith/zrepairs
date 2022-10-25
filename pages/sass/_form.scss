@@ -1,0 +1,45 @@
+form {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    .details, textarea {
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      button[type=submit] {
+        width: 100%;
+        background-color: var(--highlight-color);
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .hidden {
+          display: none;
+      }
+    .extra {
+        display: none;
+    }
+    #toggle:checked ~ .extra {
+        display: block;
+        /* A toggled state! No JavaScript! */
+    }
+    .extra-service {
+        display: none;
+    }
+    #service-toggle:checked ~ .extra-service {
+        display: block;
+        /* A toggled state! No JavaScript! */
+    }
+
+    .acb:checked ~ #check {
+        display: none;
+        /* A toggled state! No JavaScript! */
+    }
+}

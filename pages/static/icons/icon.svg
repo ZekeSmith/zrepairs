@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="129.01"
+   height="129.01"
+   version="1.1"
+   viewBox="0 0 129.01 129.01"
+   id="svg11"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:export-filename="/home/me/Projects/ZRepairs/page/static/favicon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs15" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="6.0150379"
+     inkscape:cx="64.421872"
+     inkscape:cy="64.504997"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11" />
+  <symbol
+     id="a"
+     transform="translate(.50391 .50391)"
+     overflow="visible">
+    <path
+       d="m42.156-6-0.79688 6h-35.594v-5.5938l29.031-43.531h-26.156v-6h33.594v5.7656l-28.875 43.359z"
+       id="path2" />
+  </symbol>
+  <path
+     d="m124.01 64.504c0 32.863-26.641 59.504-59.504 59.504s-59.504-26.641-59.504-59.504 26.641-59.504 59.504-59.504 59.504 26.641 59.504 59.504z"
+     fill="#62a0ea"
+     id="path5"
+     style="fill:#1c71d8;fill-opacity:1" />
+  <path
+     d="m120.5 64.504c0 30.93-25.07 56-56 56s-56-25.07-56-56 25.07-56 56-56 56 25.07 56 56z"
+     fill="#241f31"
+     id="path7" />
+  <use
+     x="40"
+     y="91.561523"
+     width="100%"
+     height="100%"
+     fill="#ffffff"
+     xlink:href="#a"
+     id="use9" />
+</svg>
